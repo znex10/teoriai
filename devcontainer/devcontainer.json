@@ -2,5 +2,9 @@
   "name": "TeoriAI Codespace",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
   "postCreateCommand": "npm install --prefix server && npm install --prefix frontend",
-  "forwardPorts": [3000, 3001, 5173]
+  "forwardPorts": [3001, 5173],
+  "portsAttributes": {
+    "3001": { "label": "Backend (Express)" },
+    "5173": { "label": "Frontend (Vite)", "onAutoForward": "openBrowser" }
+  }
 }
